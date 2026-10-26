@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#182f35">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A private emotional pattern archive: trace present events, memory echoes, protective responses, impact, repair, and evidence of trust.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Rootline — Emotional Pattern Atlas</title>
+</head>
+<body>
+  <div class="layout">
+    <aside class="rail" aria-label="App navigation">
+      <div class="wordmark"><span class="mark" aria-hidden="true">R<span>·</span></span><div><strong>ROOTLINE</strong><small>EMOTIONAL PATTERN ATLAS</small></div></div>
+      <div class="rail-section-label">WORKSPACE / PERSONAL</div>
+      <nav id="primary-nav" class="nav">
+        <button type="button" data-nav="home" class="active"><span>◫</span> Overview</button>
+        <button type="button" data-nav="stage"><span>◎</span> Stage a reaction</button>
+        <button type="button" data-nav="archive"><span>▤</span> Record archive</button>
+        <button type="button" data-nav="origins"><span>⌁</span> Origin library</button>
+        <button type="button" data-nav="atlas"><span>✳</span> Pressure atlas</button>
+        <button type="button" data-nav="trust"><span>◇</span> Trust evidence</button>
+        <button type="button" data-nav="insights"><span>↗</span> Pattern insights</button>
+        <button type="button" data-nav="data"><span>⚙</span> Data & backups</button>
+      </nav>
+      <div class="rail-bottom"><div class="rail-quote">"An old alarm is information, not an instruction."</div><div class="local-label"><span class="live-dot"></span><span id="storage-note">Preparing private workspace</span></div></div>
+    </aside>
+    <div class="workspace">
+      <header class="masthead"><div class="masthead-text"><div id="view-kicker" class="kicker">THE BIGGER PICTURE</div><h1 id="view-title">An archive, not a verdict.</h1></div><div class="masthead-actions"><span id="save-state" class="saved-indicator" aria-live="polite">Starting…</span><button class="btn dark" type="button" data-nav="stage">+ Stage an emotion</button></div></header>
+      <nav class="mobile-nav" aria-label="Mobile navigation"><button data-nav="home">Overview</button><button data-nav="stage">Stage</button><button data-nav="archive">Archive</button><button data-nav="origins">Origins</button><button data-nav="atlas">Atlas</button><button data-nav="trust">Trust</button><button data-nav="insights">Insights</button><button data-nav="data">Backups</button></nav>
+      <main id="screen" class="screen" tabindex="-1"></main>
+      <footer>Rootline helps you reflect on patterns and choices. It cannot determine anyone's intentions, diagnose a person, or replace mental health care. <span>YOUR RECORDS • YOUR PACE</span></footer>
+    </div>
+  </div>
+  <dialog id="modal" class="modal"><button id="close-modal" class="modal-close" type="button" aria-label="Close dialog">×</button><div id="modal-body"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <input id="import-file" type="file" accept=".json,application/json" hidden>
+  <script src="./db.js" defer></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>
